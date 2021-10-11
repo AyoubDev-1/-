@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>تقنية</title>
+    <link rel="shortcut icon" href="imge/1.jpg" type="image/x-icon">
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+  --violet:#6c5ce7;
+  --pink:#47363b;
+  --gradient:linear-gradient(90deg, var(--violet), var(--pink));
+}
+
+*{
+  font-family: 'Nunito', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s ease-out;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+  width:1rem;
+}
+
+html::-webkit-scrollbar-track{
+  background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+  background:#fff;
+  border-radius: 5rem;
+}
+
+body{
+  background:var(--gradient);
+  padding:3rem 7%;
+}
+
+section{
+  padding:2rem 7%;
+}
+
+.container{
+  background:#fff;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+
+.heading{
+  color:transparent;
+  background:var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  padding:0 1rem;
+  padding-top: 2.5rem;
+  text-align: center;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  padding:.8rem 3rem;
+  border-radius: .5rem;
+  background:#333;
+  color:#fff;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.btn:hover{
+  background:var(--gradient);
+}
+ 
+
+ 
+
+.contact{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.contact .image{
+  flex:1 1 35rem;
+}
+
+.contact .image img{
+  width:100%;
+}
+
+.contact form{
+  flex:1 1 50rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  border-radius: .5rem;
+  padding:2rem;
+}
+
+.contact form .inputBox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .inputBox input,
+.contact form .box, 
+.contact form textarea{
+  width: 100%;
+  padding:1rem;
+  margin:.7rem 0;
+  font-size: 1.7rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  border-radius: .5rem;
+  text-transform: none;
+  color:#333;
+} 
+
+.contact form .inputBox input:focus,
+.contact form .box:focus, 
+.contact form textarea:focus{
+  border-color: var(--pink);
+}
+
+.contact form .inputBox input{
+  width:49%;
+}
+
+.contact form textarea{
+  height: 20rem;
+  resize: none;
+}
+
+ 
+
+/* media queries  */
+
+@media (max-width:991px){
+
+  html{
+    font-size: 55%;
+  }
+
+  body{
+    padding:1.5rem;
+  }
+
+  header{
+    padding:2rem;
+  }
+
+  section{
+    padding:2rem;
+  }
+
+}
+
+ 
+
+  .contact form .inputBox input{
+    width:100%;
+  }
+
+ 
+
+@media (max-width:400px){
+
+  html{
+    font-size: 50%;
+  }
+
+} 
+</style>
+<body>
+
+    <header>
+        <a href="index.html"><h1>تقنية  <i class="fab fa-affiliatetheme"></i></h1></a>
+        
+
+        <section class="menu">
+            <ul class="menu-list">
+                 <a href="index.html"><li >الرئيسية</li></a>
+                <li >منتجات</li>
+                <a href="about.html"><li>من نحن</li></a>
+                <a href="contact.html"><li class="active">تواصل معنا</li></a>
+                 
+            </ul>
+
+            <button>
+                <i class="fas fa-times"></i>
+                <i class="fas fa-bars"></i>
+            </button>
+        </section>
+    </header>
+    <!-- contact section  -->
+
+  <section class="contact">
+
+    <div class="image">
+        <img src="img/contact-img.svg" alt="">
+    </div>
+    
+    <form action="">
+    
+        <div class="inputBox">
+            <input type="text" placeholder="اسم">
+            <input type="email" placeholder="البريد الإلكتروني">
+        </div>
+    
+        <input type="text" placeholder="موضوع" class="box">
+    
+        <textarea placeholder="رسالة" name="" id="" cols="30" rows="10"></textarea>
+    
+        <input type="submit" class="btn" value="إرسال">
+    
+    </form>
+    
+    </section>
+   
+    <script>
+        var menu = document.querySelector('.menu');
+        var menuBtn = document.querySelector('.menu button');
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('opened')
+        })
+    </script>
+</body>
+</html>
